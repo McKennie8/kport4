@@ -49,7 +49,7 @@ const AboutSection = () => {
 
 //Styled Components
 const StyledEnvelope = styled(FontAwesomeIcon)`
-  color: #ffa600;
+  color: #ffba66;
   font-size: 36px;
   .contact-button:hover & {
     color: white;
@@ -58,7 +58,7 @@ const StyledEnvelope = styled(FontAwesomeIcon)`
 
 const ContactButton = styled(motion.button)`
   background-color: white;
-  color: #ffa600;
+  color: #ffba66;
   display: flex;
   flex-direction: column;
   align-items: center;

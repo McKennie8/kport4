@@ -15,34 +15,40 @@ const Nav = () => {
       </h1>
       <ul>
         <li>
-          <Link to="/" className="navtabs">
-            1. About Me
-          </Link>
-          <Line
-            transition={{ duration: 0.75 }}
-            initial={{ width: "0%" }}
-            animate={{ width: pathname === "/" ? "50%" : "0%" }}
-          />
+          <div style={{ position: "relative" }}>
+            <Link to="/" className="navtabs">
+              About Me
+            </Link>
+            <Line
+              transition={{ duration: 0.75 }}
+              initial={{ width: "0%" }}
+              animate={{ width: pathname === "/" ? "80%" : "0%" }}
+            />
+          </div>
         </li>
         <li>
-          <Link to="/work" className="navtabs">
-            2. My Work
-          </Link>
-          <Line
-            transition={{ duration: 0.75 }}
-            initial={{ width: "0%" }}
-            animate={{ width: pathname === "/work" ? "50%" : "0%" }}
-          />
+          <div style={{ position: "relative" }}>
+            <Link to="/work" className="navtabs">
+              My Work
+            </Link>
+            <Line
+              transition={{ duration: 0.75 }}
+              initial={{ width: "0%" }}
+              animate={{ width: pathname === "/work" ? "80%" : "0%" }}
+            />
+          </div>
         </li>
         <li>
-          <Link to="/contact" className="navtabs">
-            3. Contact Me
-          </Link>
-          <Line
-            transition={{ duration: 0.75 }}
-            initial={{ width: "0%" }}
-            animate={{ width: pathname === "/contact" ? "50%" : "0%" }}
-          />
+          <div style={{ position: "relative" }}>
+            <Link to="/contact" className="navtabs">
+              Contact Me
+            </Link>
+            <Line
+              transition={{ duration: 0.75 }}
+              initial={{ width: "0%" }}
+              animate={{ width: pathname === "/contact" ? "80%" : "0%" }}
+            />
+          </div>
         </li>
       </ul>
     </StyledNav>
@@ -50,28 +56,44 @@ const Nav = () => {
 };
 
 const StyledNav = styled.nav`
-  min-height: 10vh;
+  width: 10vh;
   display: flex;
+  flex-direction: column;
   margin: auto;
   justify-content: space-between;
   align-items: center;
-  padding: 0rem 10rem;
-  background: #58508d;
-  position: sticky;
+  padding: 0rem 5rem;
+  background: #68577c;
+  position: fixed;
+  left: 0;
   top: 0;
+  bottom: 0;
+
+  ul {
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    top: 30vh;
+    left: 1rem;
+
+    li {
+      text-align: center;
+      padding: 1rem 0rem;
+    }
+  }
+
   z-index: 10;
   #kmwdlogo img {
-    height: 8.5rem;
-    padding: 0.5rem 0.5rem;
+    height: 10rem;
+    padding: 0rem 0rem;
   }
   a {
-    color: white;
+    color: #ffba66;
     text-decoration: none;
+    display: block;
   }
-  ul {
-    display: flex;
-    list-style: none;
-  }
+
   #logo {
     font-size: 2rem;
     font-family: "Lobster", cursive;
@@ -79,24 +101,27 @@ const StyledNav = styled.nav`
   }
   .navtabs {
     font-size: 1.5rem;
+    display: flex;
   }
-  li {
-    padding-left: 10rem;
-    position: relative;
-  }
+
   @media (max-width: 1300px) {
     flex-direction: column;
     padding: 2rem 1rem;
     #logo {
       display: inline-block;
-      margin: 1rem;
+      margin: 0rem;
     }
     ul {
-      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      padding: 0rem;
       justify-content: space-around;
       width: 100%;
+      text-decoration: none;
+      background-color: white;
       li {
         padding: 0;
+        background-color: white;
       }
     }
   }
@@ -104,11 +129,11 @@ const StyledNav = styled.nav`
 
 const Line = styled(motion.div)`
   height: 0.3rem;
-  background: #ffa600;
+  background: #4e8183;
   width: 0%;
   position: absolute;
-  bottom: -80%;
-  left: 60%;
+  bottom: -50%;
+  left: 0%;
   @media (max-width: 1300px) {
     left: 0%;
   }

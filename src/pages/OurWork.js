@@ -92,7 +92,7 @@ const Movie = styled(motion.div)`
   padding-bottom: 10rem;
   .line {
     height: 0.5rem;
-    background: #e293de;
+    background: #4e8183;
     margin-bottom: 3rem;
   }
   img {
@@ -113,20 +113,20 @@ const Frame1 = styled(motion.div)`
   top: 10%;
   width: 100%;
   height: 100vh;
-  background: #fffebf;
+  background: #023059;
   z-index: 2;
 `;
 
 const Frame2 = styled(Frame1)`
-  background: #ff8efb;
+  background: #68577c;
 `;
 
 const Frame3 = styled(Frame1)`
-  background: #8ed2ff;
+  background: #4e8183;
 `;
 
 const Frame4 = styled(Frame1)`
-  background: #8effa0;
+  background: #ffba66;
 `;
 
 export default OurWork;

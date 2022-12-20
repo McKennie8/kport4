@@ -16,8 +16,8 @@ html {
 
 
 body{
-    background: #003f5c;
-    font-family: 'Inter', sans-serif;
+    background: #023059;
+    font-family: 'Manrope', sans-serif;
     overflow-x: hidden;
 
 }
@@ -30,7 +30,7 @@ button{
     background: transparent;
     color: white;
     transition: all 0.5s ease;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Manrope', sans-serif;
     &:hover{
         background-color: #ffa600;
         color: white;
