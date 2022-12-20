@@ -3,19 +3,21 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useLocation } from "react-router-dom";
-
+import KMWDlogo1 from "../img/KMWDlogo1.png";
 const Nav = () => {
   const { pathname } = useLocation();
   return (
     <StyledNav>
       <h1>
-        <Link id="logo" to="/">
-          Kirby Martin Web Development
+        <Link id="kmwdlogo" to="/">
+          <img src={KMWDlogo1} alt="Logo" />
         </Link>
       </h1>
       <ul>
         <li>
-          <Link to="/">1. About Me</Link>
+          <Link to="/" className="navtabs">
+            1. About Me
+          </Link>
           <Line
             transition={{ duration: 0.75 }}
             initial={{ width: "0%" }}
@@ -23,7 +25,9 @@ const Nav = () => {
           />
         </li>
         <li>
-          <Link to="/work">2. My Work</Link>
+          <Link to="/work" className="navtabs">
+            2. My Work
+          </Link>
           <Line
             transition={{ duration: 0.75 }}
             initial={{ width: "0%" }}
@@ -31,7 +35,9 @@ const Nav = () => {
           />
         </li>
         <li>
-          <Link to="/contact">3. Contact Me</Link>
+          <Link to="/contact" className="navtabs">
+            3. Contact Me
+          </Link>
           <Line
             transition={{ duration: 0.75 }}
             initial={{ width: "0%" }}
@@ -49,11 +55,15 @@ const StyledNav = styled.nav`
   margin: auto;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 10rem;
+  padding: 0rem 10rem;
   background: #58508d;
   position: sticky;
   top: 0;
   z-index: 10;
+  #kmwdlogo img {
+    height: 8.5rem;
+    padding: 0.5rem 0.5rem;
+  }
   a {
     color: white;
     text-decoration: none;
@@ -63,9 +73,12 @@ const StyledNav = styled.nav`
     list-style: none;
   }
   #logo {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-family: "Lobster", cursive;
     font-weight: lighter;
+  }
+  .navtabs {
+    font-size: 1.5rem;
   }
   li {
     padding-left: 10rem;
@@ -91,7 +104,7 @@ const StyledNav = styled.nav`
 
 const Line = styled(motion.div)`
   height: 0.3rem;
-  background: #58508d;
+  background: #ffa600;
   width: 0%;
   position: absolute;
   bottom: -80%;
