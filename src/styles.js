@@ -43,6 +43,12 @@ export const Image = styled.div`
 
 export const Hide = styled.div`
   overflow: hidden;
+  h3 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 5rem;
+  }
 `;
 
 export const Question = styled.div``;

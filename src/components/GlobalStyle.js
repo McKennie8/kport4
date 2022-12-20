@@ -17,7 +17,7 @@ html {
 
 body{
     background: #023059;
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
 
 }

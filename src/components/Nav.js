@@ -3,14 +3,16 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useLocation } from "react-router-dom";
-import KMWDlogo1 from "../img/KMWDlogo1.png";
+
+import KMWDlogo2 from "../img/KMWDlogo2.png";
+
 const Nav = () => {
   const { pathname } = useLocation();
   return (
     <StyledNav>
       <h1>
         <Link id="kmwdlogo" to="/">
-          <img src={KMWDlogo1} alt="Logo" />
+          <img src={KMWDlogo2} alt="Logo" />
         </Link>
       </h1>
       <ul>
@@ -63,7 +65,7 @@ const StyledNav = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 0rem 5rem;
-  background: #68577c;
+  background: #333136;
   position: fixed;
   left: 0;
   top: 0;
@@ -89,19 +91,21 @@ const StyledNav = styled.nav`
     padding: 0rem 0rem;
   }
   a {
-    color: #ffba66;
+    color: #c8c8c8;
     text-decoration: none;
     display: block;
   }
 
   #logo {
     font-size: 2rem;
-    font-family: "Lobster", cursive;
+
     font-weight: lighter;
   }
   .navtabs {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     display: flex;
+    font-family: "Poppins";
+    font-weight: 100;
   }
 
   @media (max-width: 1300px) {
