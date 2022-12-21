@@ -3,11 +3,13 @@ import { motion } from "framer-motion";
 
 export const About = styled(motion.div)`
   min-height: 90vh;
+
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 5rem 10rem 5rem 20rem;
+
+  justify-content: space-around;
+  padding: 5rem 5rem 5rem 20rem;
   color: white;
+  z-index: 1;
   @media (max-width: 1300px) {
     display: block;
     padding: 2rem 2rem;
@@ -17,7 +19,10 @@ export const About = styled(motion.div)`
 
 export const Description = styled.div`
   flex: 1;
-  padding-right: 5rem;
+  min-width: 70vh;
+  max-width: 80vh;
+
+  padding-right: 1rem;
   z-index: 2;
   h2 {
     font-weight: lighter;
@@ -26,6 +31,7 @@ export const Description = styled.div`
     padding: 0;
     button {
       margin: 2rem 0rem 5rem 0rem;
+      border-radius: 30px;
     }
   }
 `;
