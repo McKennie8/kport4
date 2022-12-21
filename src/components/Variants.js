@@ -12,6 +12,7 @@ import restlogo2 from "../img/restlogo2.png";
 
 import npmlogo2 from "../img/npmlogo2.png";
 import sasslogo from "../img/sasslogo.png";
+import reduxlogo from "../img/reduxlogo.jpeg";
 import StyledComponents from "../img/StyledComponents.png";
 import framermotionlogo from "../img/framermotionlogo.png";
 import githublogo from "../img/githublogo.png";
@@ -48,7 +49,7 @@ const images = [
   { src: framermotionlogo, text: "Framer Motion" },
   { src: StyledComponents, text: "Styled Components" },
   { src: npmlogo2, text: "NPM" },
-  { src: jsonlogo, text: "JSON" },
+  { src: reduxlogo, text: "Redux" },
   { src: githublogo, text: "Github" },
 ];
 

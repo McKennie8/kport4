@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 //Import Icons
 import clock from "../img/clock.svg";
 import diaphragm from "../img/diaphragm.svg";
@@ -10,49 +11,21 @@ import { About, Description, Image } from "../styles";
 import styled from "styled-components";
 import { fade } from "../animation";
 import { useScroll } from "./UseScroll";
+//import images
+import muzikplayerapp from "../img/muzikplayerapp.png";
+import flipflopapp from "../img/flipflopapp.png";
 
 const ServicesSection = () => {
   const [element, controls] = useScroll();
   return (
     <Services variants={fade} initial="hidden" animate={controls} ref={element}>
-      <Description>
+      <AppImgs>
         <h2>
           High <span>perfomance</span>, robust Apps
         </h2>
-        <Cards>
-          <Card>
-            <div className="icon">
-              <img alt="icon" src={clock} />
-              <h3>Efficient</h3>
-            </div>
-            <p>Lorem ipsum dolor sit amet.</p>
-          </Card>
-          <Card>
-            <div className="icon">
-              <img alt="icon" src={teamwork} />
-              <h3>Teamwork</h3>
-            </div>
-            <p>Lorem ipsum dolor sit amet.</p>
-          </Card>
-          <Card>
-            <div className="icon">
-              <img alt="icon" src={diaphragm} />
-              <h3>Diaphragm</h3>
-            </div>
-            <p>Lorem ipsum dolor sit amet.</p>
-          </Card>
-          <Card>
-            <div className="icon">
-              <img alt="icon" src={money} />
-              <h3>Affordable</h3>
-            </div>
-            <p>Lorem ipsum dolor sit amet.</p>
-          </Card>
-        </Cards>
-      </Description>
-      <Image>
-        <img alt="camera" src={home2} />
-      </Image>
+        <img src={muzikplayerapp} alt="music player app" />
+        <img alt="movie search app" src={flipflopapp} />
+      </AppImgs>
     </Services>
   );
 };
@@ -87,6 +60,12 @@ const Card = styled.div`
       color: black;
       padding: 1rem;
     }
+  }
+`;
+
+const AppImgs = styled(motion.div)`
+  img {
+    width: 90%;
   }
 `;
 
