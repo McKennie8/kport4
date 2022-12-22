@@ -14,8 +14,8 @@ import styled from "styled-components";
 
 const ContactSection = () => {
   return (
-    <About>
-      <Description>
+    <ContactDiv>
+      <ContactSmall>
         <motion.div className="title">
           <Hide>
             <motion.h2 variants={titleAnim}>Let's make something</motion.h2>
@@ -38,12 +38,12 @@ const ContactSection = () => {
             <StyledEnvelope icon={faEnvelope} />
           </ContactButton>
         </ButtonDecor>
-      </Description>
+      </ContactSmall>
+
       <Image>
         <motion.img variants={photoAnim} src={Kirby} alt="Kirby" />
       </Image>
-      <Wave />
-    </About>
+    </ContactDiv>
   );
 };
 
@@ -67,10 +67,38 @@ const ContactButton = styled(motion.button)`
   text-decoration: none;
   cursor: pointer;
   padding: 0rem 0rem;
+  border-radius: 30px;
 `;
 
 const ButtonDecor = styled(motion.a)`
   text-decoration: none;
 `;
 
+const ContactDiv = styled(motion.div)`
+  min-height: 90vh;
+  display: flex;
+  justify-content: space-around;
+  padding: 5rem 5rem 5rem 20rem;
+  color: white;
+  z-index: 1;
+`;
+
+const ContactSmall = styled.div`
+  flex: 1;
+  min-width: 70vh;
+  max-width: 80vh;
+
+  padding-right: 1rem;
+  z-index: 2;
+  h2 {
+    font-weight: lighter;
+  }
+  @media (max-width: 1300px) {
+    padding: 0;
+    button {
+      margin: 2rem 0rem 5rem 0rem;
+      border-radius: 30px;
+    }
+  }
+`;
 export default ContactSection;

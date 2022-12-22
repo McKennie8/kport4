@@ -30,7 +30,7 @@ const OurWork = () => {
       variants={pageAnimation}
       initial="hidden"
       animate="show"
-      style={{ background: "#023059" }}
+      style={{ background: "#282727" }}
     >
       <motion.div variants={sliderContainer}>
         <Frame1 variants={slider}></Frame1>
@@ -119,15 +119,15 @@ const Frame1 = styled(motion.div)`
 `;
 
 const Frame2 = styled(Frame1)`
-  background: #68577c;
-`;
-
-const Frame3 = styled(Frame1)`
   background: #4e8183;
 `;
 
+const Frame3 = styled(Frame1)`
+  background: #023059;
+`;
+
 const Frame4 = styled(Frame1)`
-  background: #ffba66;
+  background: #4e8183;
 `;
 
 export default OurWork;

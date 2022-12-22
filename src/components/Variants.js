@@ -71,10 +71,12 @@ const Variants = () => (
 
 const StyledContainer = styled(motion.ul)`
   width: 80vh;
+
   height: 700px;
   display: grid;
   overflow: hidden;
   margin: 0;
+  margin-top: -20px;
   list-style: none;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);

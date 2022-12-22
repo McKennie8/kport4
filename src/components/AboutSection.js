@@ -1,7 +1,7 @@
 import React from "react";
 
 //Styled
-import { About, Hide, Description } from "../styles";
+import { About, Hide, Description, HideTitle } from "../styles";
 //Framer Motion
 import { motion } from "framer-motion";
 import { titleAnim, fade } from "../animation";
@@ -26,9 +26,9 @@ const AboutSection = () => {
               I'm <span>Kirby</span>
             </motion.h2>
           </Hide>
-          <Hide>
-            <motion.h3 variants={titleAnim}>Front End Developer </motion.h3>
-          </Hide>
+          <HideTitle>
+            <motion.h5 variants={titleAnim}>Front End Developer </motion.h5>
+          </HideTitle>
         </motion.div>
 
         <motion.p variants={fade}></motion.p>
@@ -49,11 +49,8 @@ const Hover = styled(motion.div)`
   cursor: pointer;
   font-size: 3rem;
 `;
-const TestDiv = styled(motion.div)`
-  text-align: left;
-  z-index: 1;
-  min-width: 60vh;
-  cursor: pointer;
-  font-size: 3rem;
+const Hide2 = styled(motion.div)`
+  padding-top: 10rem;
 `;
+
 export default AboutSection;

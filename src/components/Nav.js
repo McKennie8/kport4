@@ -11,16 +11,16 @@ const Nav = () => {
   return (
     <StyledNav>
       <h1>
-        <Link id="kmwdlogo" to="/">
+        <a id="kmwdlogo" href="/">
           <img src={KMWDlogo2} alt="Logo" />
-        </Link>
+        </a>
       </h1>
       <ul>
         <li>
           <div style={{ position: "relative" }}>
-            <Link to="/" className="navtabs">
+            <a href="/" className="navtabs">
               About Me
-            </Link>
+            </a>
             <Line
               transition={{ duration: 0.75 }}
               initial={{ width: "0%" }}
@@ -30,9 +30,9 @@ const Nav = () => {
         </li>
         <li>
           <div style={{ position: "relative" }}>
-            <Link to="/work" className="navtabs">
+            <a href="/work" className="navtabs">
               My Work
-            </Link>
+            </a>
             <Line
               transition={{ duration: 0.75 }}
               initial={{ width: "0%" }}
@@ -42,9 +42,9 @@ const Nav = () => {
         </li>
         <li>
           <div style={{ position: "relative" }}>
-            <Link to="/contact" className="navtabs">
+            <a href="/contact" className="navtabs">
               Contact Me
-            </Link>
+            </a>
             <Line
               transition={{ duration: 0.75 }}
               initial={{ width: "0%" }}

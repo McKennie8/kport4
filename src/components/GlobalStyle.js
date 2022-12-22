@@ -16,7 +16,7 @@ html {
 
 
 body{
-    background: #023059;
+    background: #282727;
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
 
@@ -47,12 +47,15 @@ button{
         font-weight: bold;
        
     }
+    h5 {
+        padding-top: 20rem;
+    }
     a{
         font-size: 1.1rem;
     }
     span{
         font-weight: bold;
-        color:#ffa600
+        color:#4e8183
     }
     p{
         padding: 3rem 0rem;

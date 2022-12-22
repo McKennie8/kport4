@@ -56,6 +56,13 @@ export const Hide = styled.div`
     font-size: 5rem;
   }
 `;
+export const HideTitle = styled.div`
+  overflow: hidden;
+  h5 {
+    font-size: 4rem;
+    padding-top: 4rem;
+  }
+`;
 
 export const Question = styled.div``;
 
