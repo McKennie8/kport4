@@ -26,14 +26,14 @@ button{
     font-size: 1.1.rem;
     cursor: pointer;
     padding: 1rem 2rem;
-    border: 3px solid #ffa600;
+    border: 3px solid #4e8183;
     background: transparent;
     color: white;
     transition: all 0.5s ease;
     font-family: 'Manrope', sans-serif;
     &:hover{
-        background-color: #ffa600;
-        color: white;
+        background-color: white;
+        color: #4e8183;
     }
 }
     h2{

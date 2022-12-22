@@ -17,13 +17,19 @@ const FaqSection = () => {
         <Toggle title="How Are Your Communication Skills?">
           <div className="answer">
             <p>
-              Top notch. I ran my own company for 15 years and learned how to
-              effectively and efficiently communicate with clients. I also have
-              a degree in Communication.
+              Top notch. I ran my own video/photo company for 15 years and
+              learned how to effectively and efficiently communicate with
+              clients. My 15 years of working to arrange images on a screen in a
+              beautiful and logical manner inform my ability to do the same in
+              web development.
             </p>
             <p>
-              Please see "My Work" for walk-through videos which show off my
-              work and my people skills.
+              Please see{" "}
+              <a href="/work" style={{ color: "#4e8183", fontSize: "1.75rem" }}>
+                My Work
+              </a>{" "}
+              for walk-through videos which show off my work and my people
+              skills.
             </p>
           </div>
         </Toggle>
@@ -45,8 +51,10 @@ const FaqSection = () => {
         </Toggle>
         <Toggle title="What Are Your Passions Aside From Web Development?">
           <div className="answer">
-            <p>I love to surf and play tennis.</p>
-            <p>I really enjoy playing and teaching all kinds of sports. </p>
+            <p>
+              I love to surf and play tennis. And I love exploring different
+              cultures.
+            </p>
           </div>
         </Toggle>
         <Toggle title="Do You Have A Sense Of Humor?">
@@ -83,7 +91,7 @@ const Faq = styled(About)`
     padding: 2rem 0rem;
     p {
       padding: 1rem 0rem;
-      color: #ffba66;
+      color: #dadbdd;
     }
   }
 `;

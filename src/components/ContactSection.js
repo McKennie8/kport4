@@ -49,16 +49,16 @@ const ContactSection = () => {
 
 //Styled Components
 const StyledEnvelope = styled(FontAwesomeIcon)`
-  color: #ffba66;
+  color: white;
   font-size: 36px;
   .contact-button:hover & {
-    color: white;
+    color: #4e8183;
   }
 `;
 
 const ContactButton = styled(motion.button)`
-  background-color: white;
-  color: #ffba66;
+  background-color: #4e8183;
+  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -68,6 +68,7 @@ const ContactButton = styled(motion.button)`
   cursor: pointer;
   padding: 0rem 0rem;
   border-radius: 30px;
+  border-color: #4e8183;
 `;
 
 const ButtonDecor = styled(motion.a)`
