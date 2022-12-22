@@ -16,6 +16,9 @@ import {
   sliderContainer,
   swoopAdoop,
 } from "../animation";
+//import movies
+import MoviesApp from "../img/MoviesApp.mp4";
+import MusicPlayerApp2 from "../img/MusicPlayerApp2.mp4";
 
 import ScrollTop from "../components/ScrollTop";
 import { useScroll } from "../components/UseScroll";
@@ -39,25 +42,30 @@ const OurWork = () => {
         <Frame4 variants={slider}></Frame4>
       </motion.div>
       <Movie>
-        <motion.h2 variants={fade}>The Athlete</motion.h2>
+        <motion.h2 variants={fade}>Searchable Movies App</motion.h2>
         <motion.div variants={lineAnim} className="line"></motion.div>
-        <Link to="/work/the-athlete">
-          <Hide>
-            <motion.img variants={photoAnim} src={athlete} alt="athlete" />
-          </Hide>
-        </Link>
+
+        <Hide>
+          <video
+            variants={photoAnim}
+            src={MoviesApp}
+            alt="movie app"
+            controls
+          />
+        </Hide>
       </Movie>
-      <Movie
-        ref={element}
-        variants={swoopAdoop}
-        animate={controls}
-        initial="hidden"
-      >
-        <h2>The Racer</h2>
+      <Movie>
+        <motion.h2 variants={fade}>Music Player App</motion.h2>
         <motion.div variants={lineAnim} className="line"></motion.div>
-        <Link to="/work/the-racer">
-          <img src={theracer} alt="theracer" />
-        </Link>
+
+        <Hide>
+          <video
+            variants={photoAnim}
+            src={MusicPlayerApp2}
+            alt="music player app"
+            controls
+          />
+        </Hide>
       </Movie>
       <Movie
         ref={element2}
