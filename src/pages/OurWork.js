@@ -2,9 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 //Images
-import athlete from "../img/athlete-small.png";
-import theracer from "../img/theracer-small.png";
-import goodtimes from "../img/goodtimes-small.png";
+
 //Animations
 import { motion } from "framer-motion";
 import {
@@ -67,18 +65,7 @@ const OurWork = () => {
           />
         </Hide>
       </Movie>
-      <Movie
-        ref={element2}
-        variants={swoopAdoop}
-        animate={controls2}
-        initial="hidden"
-      >
-        <h2>Good Times</h2>
-        <motion.div variants={lineAnim} className="line"></motion.div>
-        <Link to="/work/good-times">
-          <img src={goodtimes} alt="goodtimes" />
-        </Link>
-      </Movie>
+
       <ScrollTop />
     </Work>
   );
