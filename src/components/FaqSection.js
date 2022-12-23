@@ -86,12 +86,23 @@ const Faq = styled(About)`
     font-size: 2rem;
     padding: 3rem 0rem;
     cursor: pointer;
+    @media (max-width: 480px) {
+      font-size: 1.5rem;
+      padding: 1rem 0rem;
+      cursor: pointer;
+    }
   }
   .answer {
     padding: 2rem 0rem;
     p {
       padding: 1rem 0rem;
       color: #dadbdd;
+    }
+  }
+  @media (max-width: 480px) {
+    padding: 1rem 0rem;
+    p {
+      font-size: 1.25rem;
     }
   }
 `;

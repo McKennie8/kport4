@@ -34,6 +34,11 @@ export const Description = styled.div`
       border-radius: 30px;
     }
   }
+  @media (max-width: 480px) {
+    display: flex;
+    min-width: 30vh;
+    max-width: 40vh;
+  }
 `;
 
 export const Image = styled.div`
@@ -55,12 +60,27 @@ export const Hide = styled.div`
   h2 {
     font-size: 5rem;
   }
+  @media (max-width: 480px) {
+    h3 {
+      font-size: 3rem;
+    }
+    h2 {
+      font-size: 4rem;
+    }
+  }
 `;
 export const HideTitle = styled.div`
   overflow: hidden;
   h5 {
     font-size: 4rem;
     padding-top: 4rem;
+  }
+  @media (max-width: 480px) {
+    h5 {
+      font-size: 3rem;
+      padding-top: 1rem;
+      padding-bottom: 2rem;
+    }
   }
 `;
 

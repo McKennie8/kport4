@@ -1,21 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-//Styled
 import { About, Hide, Description, HideTitle } from "../styles";
-//Framer Motion
+import MenuIcon from "./MenuIcon";
 import { motion } from "framer-motion";
 import { titleAnim, fade } from "../animation";
-
 import Variants from "./Variants";
-//import components
-import MenuIcon from "./MenuIcon";
 
-//Fontawesome
+const AboutSecMobile = () => {
+  const [isMobile, setIsMobile] = useState(false);
 
-//Styled Components
-import styled from "styled-components";
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 600) {
+        setIsMobile(true);
+      } else {
+        setIsMobile(false);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
-const AboutSection = () => {
   return (
     <About>
       <Description>
@@ -42,10 +50,9 @@ const AboutSection = () => {
         </motion.h3>
       </Hide> */}
       <Variants />
+      {isMobile && <MenuIcon />}
     </About>
   );
 };
 
-//Styled Components
-
-export default AboutSection;
+export default AboutSecMobile;

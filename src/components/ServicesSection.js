@@ -40,6 +40,16 @@ const Services = styled(About)`
   }
   @media (max-width: 1300px) {
   }
+  @media (max-width: 480px) {
+    display: flex;
+    align-content: center;
+    text-align: center;
+    h2 {
+      padding-bottom: 1rem;
+      font-size: 2rem;
+      width: 90%;
+    }
+  }
 `;
 const Cards = styled.div`
   display: flex;
@@ -64,8 +74,19 @@ const Card = styled.div`
 `;
 
 const AppImgs = styled(motion.div)`
+  display: block;
+
   img {
     width: 90%;
+    align-self: center;
+  }
+  @media (max-width: 480px) {
+    align-content: center;
+    img {
+      width: 90%;
+      display: flex;
+      align-items: center;
+    }
   }
 `;
 
