@@ -29,9 +29,9 @@ const ContactSection = () => {
             <motion.h2 variants={titleAnim}>together.</motion.h2>
           </Hide>
         </motion.div>
-        <motion.p variants={fade}>
+        <ContactP variants={fade}>
           Contact me for your web development needs
-        </motion.p>
+        </ContactP>
         <ButtonDecor href="mailto:kirby@kirbymartin.com?subject=Friendly Inquiry&body=Hello Kirby,%0D%0A%0D%0AI am interested in learning more about your services.%0D%0A%0D%0ARegards,%0D%0A[Your Name]">
           <ContactButton className="contact-button" variants={fade}>
             Contact Me
@@ -69,10 +69,22 @@ const ContactButton = styled(motion.button)`
   padding: 0rem 0rem;
   border-radius: 30px;
   border-color: #4e8183;
+  @media (max-width: 480px) {
+    font-size: 0.8rem; /* smaller font size */
+    padding: 0.8rem 1.6rem; /* smaller padding */
+    width: 12rem;
+    display: flex;
+    margin: 0 auto;
+  }
 `;
 
 const ButtonDecor = styled(motion.a)`
   text-decoration: none;
+  @media (max-width: 480px) {
+    padding: 0rem 0rem;
+    margin: 0;
+    height: 10rem;
+  }
 `;
 
 const ContactDiv = styled(motion.div)`
@@ -82,6 +94,17 @@ const ContactDiv = styled(motion.div)`
   padding: 5rem 5rem 5rem 20rem;
   color: white;
   z-index: 1;
+
+  @media (max-width: 480px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center; /* Add this property to center the content vertically */
+    padding: 1rem 1rem 1rem 1rem;
+    color: white;
+    z-index: 1;
+    margin: 0;
+  }
 `;
 
 const ContactSmall = styled.div`
@@ -100,6 +123,19 @@ const ContactSmall = styled.div`
       margin: 2rem 0rem 5rem 0rem;
       border-radius: 30px;
     }
+    h2 {
+      font-size: 2rem;
+      text-align: center;
+    }
   }
+  @media (max-width: 480px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+`;
+
+const ContactP = styled(motion.p)`
+  padding: 1rem 0rem;
 `;
 export default ContactSection;

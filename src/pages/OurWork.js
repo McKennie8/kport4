@@ -83,6 +83,17 @@ const Work = styled(motion.div)`
     padding: 1rem 5rem;
     color: #4e8183;
   }
+  @media (max-width: 480px) {
+    min-height: 100vh;
+    overflow: hidden;
+    padding: 1rem 2rem;
+
+    h2 {
+      padding: 1rem 2rem;
+      color: #4e8183;
+      font-size: 2.1rem;
+    }
+  }
 `;
 const Movie = styled(motion.div)`
   padding-bottom: 10rem;
@@ -96,10 +107,31 @@ const Movie = styled(motion.div)`
     height: 70vh;
     object-fit: cover;
   }
+
+  @media (max-width: 480px) {
+    padding-bottom: 2rem;
+  }
+  .line {
+    height: 0.5rem;
+    background: #4e8183;
+    margin-bottom: 1.5rem;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 `;
 
 const Hide = styled.div`
   overflow: hidden;
+  @media (max-width: 480px) {
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
 `;
 
 //Frame Animation

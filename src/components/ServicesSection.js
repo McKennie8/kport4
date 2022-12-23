@@ -83,9 +83,10 @@ const AppImgs = styled(motion.div)`
   @media (max-width: 480px) {
     align-content: center;
     img {
-      width: 90%;
+      width: 100%;
       display: flex;
       align-items: center;
+      align-self: center;
     }
   }
 `;
