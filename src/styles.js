@@ -15,6 +15,11 @@ export const About = styled(motion.div)`
     padding: 2rem 2rem;
     text-align: center;
   }
+  @media (max-width: 480px) {
+    align-content: center;
+    display: block;
+    align-items: center;
+  }
 `;
 
 export const Description = styled.div`

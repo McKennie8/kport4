@@ -14,12 +14,14 @@ const MenuIcon = () => {
 };
 
 const MenuDiv = styled.div`
-  min-height: 40vh;
+  min-height: 5vh;
   position: absolute;
   top: 0;
   left: 0;
   color: white;
   font-size: 6vh;
+  background-color: #4e8183;
+  padding: 0.5rem 1rem;
 `;
 
 export default MenuIcon;

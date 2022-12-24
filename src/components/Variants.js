@@ -78,8 +78,8 @@ const StyledContainer = styled(motion.ul)`
   margin: 0;
   margin-top: -20px;
   list-style: none;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
   gap: 30px;
   padding: 35px;
 

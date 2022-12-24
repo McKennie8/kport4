@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Kirby from "../img/Kirby.jpg";
 //Styled
 import { About, Description, Image, Hide } from "../styles";
@@ -11,12 +11,29 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 //Styled Components
 import styled from "styled-components";
+import MenuIcon from "./MenuIcon";
 
 const ContactSection = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 600) {
+        setIsMobile(true);
+      } else {
+        setIsMobile(false);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <ContactDiv>
       <ContactSmall>
-        <motion.div className="title">
+        <StyledTitle>
           <Hide>
             <motion.h2 variants={titleAnim}>Let's make something</motion.h2>
           </Hide>
@@ -28,7 +45,7 @@ const ContactSection = () => {
           <Hide>
             <motion.h2 variants={titleAnim}>together.</motion.h2>
           </Hide>
-        </motion.div>
+        </StyledTitle>
         <ContactP variants={fade}>
           Contact me for your web development needs
         </ContactP>
@@ -43,6 +60,7 @@ const ContactSection = () => {
       <Image>
         <motion.img variants={photoAnim} src={Kirby} alt="Kirby" />
       </Image>
+      {isMobile && <MenuIcon />}
     </ContactDiv>
   );
 };
@@ -83,7 +101,7 @@ const ButtonDecor = styled(motion.a)`
   @media (max-width: 480px) {
     padding: 0rem 0rem;
     margin: 0;
-    height: 10rem;
+    height: 5rem;
   }
 `;
 
@@ -132,10 +150,16 @@ const ContactSmall = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 10vh;
+    overflow: hidden;
+    padding: 8rem 2rem;
   }
 `;
 
 const ContactP = styled(motion.p)`
   padding: 1rem 0rem;
+`;
+const StyledTitle = styled(motion.div)`
+  padding: 0rem 0rem;
 `;
 export default ContactSection;

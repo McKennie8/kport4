@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 //Images
-
+import MenuIcon from "../components/MenuIcon";
 //Animations
 import { motion } from "framer-motion";
 import {
@@ -22,8 +22,21 @@ import ScrollTop from "../components/ScrollTop";
 import { useScroll } from "../components/UseScroll";
 
 const OurWork = () => {
-  const [element, controls] = useScroll();
-  const [element2, controls2] = useScroll();
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 600) {
+        setIsMobile(true);
+      } else {
+        setIsMobile(false);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <Work
@@ -67,6 +80,7 @@ const OurWork = () => {
       </Movie>
 
       <ScrollTop />
+      {isMobile && <MenuIcon />}
     </Work>
   );
 };
@@ -86,7 +100,7 @@ const Work = styled(motion.div)`
   @media (max-width: 480px) {
     min-height: 100vh;
     overflow: hidden;
-    padding: 1rem 2rem;
+    padding: 8rem 2rem;
 
     h2 {
       padding: 1rem 2rem;
