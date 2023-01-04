@@ -88,9 +88,9 @@ const ContactButton = styled(motion.button)`
   border-radius: 30px;
   border-color: #4e8183;
   @media (max-width: 480px) {
-    font-size: 0.8rem; /* smaller font size */
+    font-size: 1.1rem; /* smaller font size */
     padding: 0.8rem 1.6rem; /* smaller padding */
-    width: 12rem;
+    width: 14rem;
     display: flex;
     margin: 0 auto;
   }
@@ -153,6 +153,14 @@ const ContactSmall = styled.div`
     min-height: 10vh;
     overflow: hidden;
     padding: 8rem 2rem;
+    button {
+      margin: 2rem 0rem 5rem 0rem;
+      border-radius: 30px;
+    }
+    h2 {
+      font-size: 2rem;
+      text-align: center;
+    }
   }
 `;
 

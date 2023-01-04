@@ -9,7 +9,6 @@ import MovieDetail from "./pages/MovieDetail";
 //import components
 import Nav from "./components/Nav";
 import Nav2 from "./components/Nav2";
-import Nav3 from "./components/Nav3";
 import MenuIcon from "./components/MenuIcon";
 
 //Router
@@ -25,7 +24,6 @@ function App() {
     <div className="App">
       <GlobalStyle />
       <Nav />
-      <Nav3 />
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<AboutUs />} />

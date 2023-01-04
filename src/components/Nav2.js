@@ -9,19 +9,21 @@ import KMWDlogo2 from "../img/KMWDlogo2.png";
 
 //import components
 import MenuIcon from "./MenuIcon";
+import MenuIcon2 from "./MenuIcon2";
 
-const Nav = () => {
+const Nav2 = () => {
   const { pathname } = useLocation();
   const [isMenuOpen, setMenuOpen] = useState(false);
 
   const handleMenuOpen = () => {
+    console.log("Menu is Open!!!!!");
     setMenuOpen(!isMenuOpen);
   };
 
   return (
     <StyledNav>
       <div className="menu-icon-container">
-        <MenuIcon isMenuOpen={isMenuOpen} handleMenuOpen={handleMenuOpen} />
+        <MenuIcon2 onClick={isMenuOpen} handleMenuOpen={handleMenuOpen} />
       </div>
       <h1>
         <a id="kmwdlogo" href="/">
@@ -196,4 +198,4 @@ const Menu = styled.div`
   transition: transform 0.3s ease-in-out;
 `;
 
-export default Nav;
+export default Nav2;
