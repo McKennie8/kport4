@@ -166,6 +166,9 @@ const ContactSmall = styled.div`
 
 const ContactP = styled(motion.p)`
   padding: 1rem 0rem;
+  @media (max-width: 480px) {
+    font-size: 1.3rem;
+  }
 `;
 const StyledTitle = styled(motion.div)`
   padding: 0rem 0rem;

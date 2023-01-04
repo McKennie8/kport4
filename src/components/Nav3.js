@@ -12,9 +12,21 @@ const Nav3 = () => {
     <NavDiv hamburgerOpen={hamburgerOpen}>
       <MenuDiv>
         <ul>
-          <li>About Me</li>
-          <li>My Work</li>
-          <li>Contact</li>
+          <li>
+            <a href="/" className="navtabs">
+              About Me
+            </a>
+          </li>
+          <li>
+            <a href="/work" className="navtabs">
+              My Work
+            </a>
+          </li>
+          <li>
+            <a href="/contact" className="navtabs">
+              Contact Me
+            </a>
+          </li>
         </ul>
       </MenuDiv>
       <MenuIcon2 onClick={() => setHamburgerOpen(!hamburgerOpen)} />
@@ -45,8 +57,7 @@ const MenuDiv = styled.div`
   color: white;
   font-size: 6vh;
   background-color: #4e8183;
-  padding: 0rem 0rem;
-
+  padding: 5rem 0rem;
   background-size: cover;
 `;
 
@@ -54,7 +65,6 @@ const NavDiv = styled(motion.div)`
   position: fixed;
   width: 100%;
   height: 100%;
-
   color: white;
   z-index: 10;
 
@@ -72,6 +82,11 @@ const NavDiv = styled(motion.div)`
     list-style-type: none;
     padding-right: 2rem;
     color: white;
+    text-decoration: none;
+    width: 80vh;
+    padding: 2rem 0rem;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
   }
   @media (min-width: 601px) {
     display: none;
