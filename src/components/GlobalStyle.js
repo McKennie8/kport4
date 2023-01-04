@@ -52,7 +52,12 @@ button{
     }
     a{
         font-size: 1.1rem;
-    }
+        font-family: 'Poppins', sans-serif;
+       
+            
+
+        }
+    
     span{
         font-weight: bold;
         color:#4e8183
@@ -80,8 +85,15 @@ button{
         padding-top: 20rem;
     }
     a{
-        font-size: 1.1rem;
+        font-size: 3rem;
+        padding: 0rem 0rem;
+        text-decoration: none;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            
+            
     }
+    
     span{
         font-weight: bold;
         color:#4e8183
