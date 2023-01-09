@@ -8,9 +8,8 @@ import MovieDetail from "./pages/MovieDetail";
 
 //import components
 import Nav from "./components/Nav";
-import Nav2 from "./components/Nav2";
+
 import Nav3 from "./components/Nav3";
-import MenuIcon from "./components/MenuIcon";
 
 //Router
 import { Routes, Route, useLocation } from "react-router-dom";

@@ -8,7 +8,6 @@ import { useLocation } from "react-router-dom";
 import KMWDlogo2 from "../img/KMWDlogo2.png";
 
 //import components
-import MenuIcon from "./MenuIcon";
 
 const Nav = () => {
   const { pathname } = useLocation();

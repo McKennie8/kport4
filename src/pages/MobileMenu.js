@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+
 import { motion } from "framer-motion";
 import { useLocation } from "react-router-dom";
 
 //logo
-import KMWDlogo2 from "../img/KMWDlogo2.png";
+
 import MobileMenuComp from "../components/MobileMenuComp";
 
 //import components
