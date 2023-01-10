@@ -22,6 +22,7 @@ const MenuDiv = styled.div`
   font-size: 6vh;
   background-color: #4e8183;
   padding: 0.5rem 1rem;
+  position: sticky;
 `;
 
 export default MenuIcon;

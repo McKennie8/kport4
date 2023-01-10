@@ -50,7 +50,6 @@ const AboutSecMobile = () => {
         </motion.h3>
       </Hide> */}
       <Variants />
-      {isMobile && <MenuIcon />}
     </About>
   );
 };
