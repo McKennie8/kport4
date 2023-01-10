@@ -21,6 +21,7 @@ export const About = styled(motion.div)`
     width: 100vw;
     overflow: hidden;
     margin: 0 auto;
+    padding: 2rem 0rem;
   }
 `;
 

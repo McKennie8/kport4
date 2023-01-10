@@ -86,16 +86,19 @@ const StyledContainer = styled(motion.ul)`
   text-align: center;
   border-radius: 50px;
   @media (max-width: 480px) {
-    width: 60vh;
     height: 50vh;
+
     grid-template-columns: repeat(3, 0.25fr);
     grid-template-rows: repeat(6, 0.25fr);
-    padding: 1rem;
-    gap: 10px;
+    padding: 0rem;
+    margin: 0;
+    gap: 20px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    margin-top: -4rem;
     text-align: center;
-    margin: 0 auto;
-    justify-items: center;
-    align-content: center;
   }
 `;
 const StyledItem = styled(motion.li)`
@@ -104,8 +107,11 @@ const StyledItem = styled(motion.li)`
   height: 10vh;
   border-radius: 100%;
   @media (max-width: 480px) {
-    width: 5vh;
-    height: 5vh;
+    width: 7vh;
+    height: 7vh;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
   }
 `;
 

@@ -75,7 +75,7 @@ const NavDiv = styled(motion.div)`
     flex-wrap: wrap;
     float: right;
     margin: 4rem 0rem;
-    padding: 0rem 10rem;
+    padding: 0rem 0rem;
     color: white;
   }
   ul li {
@@ -86,7 +86,8 @@ const NavDiv = styled(motion.div)`
     width: 80vh;
     padding: 2rem 0rem;
     border-bottom: 1px solid #ccc;
-    width: 100%;
+    width: 100vw;
+    text-align: center;
   }
   @media (min-width: 601px) {
     display: none;
