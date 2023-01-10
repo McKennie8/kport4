@@ -21,11 +21,12 @@ import GlobalStyle from "./components/GlobalStyle";
 function App() {
   const location = useLocation();
   return (
-    <div className="App">
-      <GlobalStyle />
-      <Nav />
-      <Nav3 />
-      <AnimatePresence mode="wait">
+    <AnimatePresence mode="wait">
+      <div className="App">
+        <GlobalStyle />
+        <Nav />
+        <Nav3 />
+
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<AboutUs />} />
 
@@ -35,8 +36,8 @@ function App() {
 
           <Route path="/contact" element={<ContactUs />} />
         </Routes>
-      </AnimatePresence>
-    </div>
+      </div>
+    </AnimatePresence>
   );
 }
 

@@ -93,6 +93,9 @@ const StyledContainer = styled(motion.ul)`
     padding: 1rem;
     gap: 10px;
     text-align: center;
+    margin: 0 auto;
+    justify-items: center;
+    align-content: center;
   }
 `;
 const StyledItem = styled(motion.li)`

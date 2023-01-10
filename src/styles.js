@@ -16,9 +16,11 @@ export const About = styled(motion.div)`
     text-align: center;
   }
   @media (max-width: 480px) {
-    align-content: center;
     display: block;
-    align-items: center;
+
+    width: 100vw;
+    overflow: hidden;
+    margin: 0 auto;
   }
 `;
 
@@ -40,9 +42,12 @@ export const Description = styled.div`
     }
   }
   @media (max-width: 480px) {
-    display: flex;
+    display: block;
     min-width: 30vh;
     max-width: 40vh;
+    align-items: center;
+    align-content: center;
+    margin: 0 auto;
   }
 `;
 
