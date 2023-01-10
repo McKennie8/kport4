@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import { About, Hide, Description, HideTitle } from "../styles";
-import MenuIcon from "./MenuIcon";
+
 import { motion } from "framer-motion";
 import { titleAnim, fade } from "../animation";
 import Variants from "./Variants";
