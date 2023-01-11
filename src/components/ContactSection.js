@@ -169,6 +169,8 @@ const ContactP = styled(motion.p)`
   font-size: 1.8rem;
   @media (max-width: 480px) {
     font-size: 1.3rem;
+    text-align: center;
+    display: flex;
   }
 `;
 const StyledTitle = styled(motion.div)`
