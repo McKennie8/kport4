@@ -60,7 +60,6 @@ const ContactSection = () => {
       <Image>
         <motion.img variants={photoAnim} src={Kirby} alt="Kirby" />
       </Image>
-      {isMobile && <MenuIcon />}
     </ContactDiv>
   );
 };
@@ -78,6 +77,7 @@ const ContactButton = styled(motion.button)`
   background-color: #4e8183;
   color: white;
   display: flex;
+
   flex-direction: column;
   align-items: center;
   width: 20rem;
@@ -165,7 +165,8 @@ const ContactSmall = styled.div`
 `;
 
 const ContactP = styled(motion.p)`
-  padding: 1rem 0rem;
+  padding: 3rem 0rem;
+  font-size: 1.8rem;
   @media (max-width: 480px) {
     font-size: 1.3rem;
   }
