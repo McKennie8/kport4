@@ -32,7 +32,6 @@ const AboutSecMobile = () => {
             <motion.h2 variants={titleAnim}>Hi,</motion.h2>
           </Hide>
           <Hide>
-            ``
             <motion.h2 variants={titleAnim}>
               I'm <span>Kirby</span>
             </motion.h2>

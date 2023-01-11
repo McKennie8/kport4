@@ -88,7 +88,7 @@ export const HideTitle = styled.div`
   }
   @media (max-width: 480px) {
     h5 {
-      font-size: 3rem;
+      font-size: 2.5rem;
       padding-top: 1rem;
       padding-bottom: 2rem;
     }

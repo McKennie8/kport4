@@ -80,7 +80,6 @@ const OurWork = () => {
       </Movie>
 
       <ScrollTop />
-      {isMobile && <MenuIcon />}
     </Work>
   );
 };
