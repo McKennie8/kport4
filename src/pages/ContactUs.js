@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import ContactSection from "../components/ContactSection";
+import ContactSecForm from "../components/ContactSecForm";
 
 const ContactUs = () => {
   return (
@@ -21,7 +22,7 @@ const ContactUs = () => {
           strokeWidth="20"
         />
       </WaveSvg>
-      <ContactSection />
+      <ContactSecForm />
     </div>
   );
 };
