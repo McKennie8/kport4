@@ -42,13 +42,12 @@ const ContactSection = () => {
         "service_v5qoh1h",
         "template_9opl92c",
         form.current,
-        "2FOXccZFcldHqgjhb"
+        "k8IEkSrnG3TcVfeWA"
       )
       .then(
         (result) => {
           console.log(result.text);
           e.target.reset();
-          console.log("message sent");
         },
         (error) => {
           console.log(error.text);
@@ -77,13 +76,15 @@ const ContactSection = () => {
         </ContactP>
         <FormDiv>
           <form ref={form} onSubmit={sendEmail}>
-            <label>Name</label>
-            <input type="text" name="user_name" />
-            <label>Email</label>
-            <input type="email" name="user_email" />
-            <label>Message</label>
-            <textarea name="message" />
-            <input type="submit" value="Send" />
+            <NameEmail>
+              <NameInput type="text" name="from_name" placeholder="Name" />
+
+              <EmailInput type="email" name="user_email" placeholder="Email" />
+            </NameEmail>
+            <TextArea name="message" placeholder="Message" />
+            <SubmitButton type="submit" value="Send">
+              Send!
+            </SubmitButton>
           </form>
         </FormDiv>
       </ContactSmall>
@@ -196,7 +197,7 @@ const ContactSmall = styled.div`
 `;
 
 const ContactP = styled(motion.p)`
-  padding: 3rem 0rem;
+  padding: 1.5rem 0rem;
   font-size: 1.8rem;
   @media (max-width: 480px) {
     font-size: 1.3rem;
@@ -210,10 +211,73 @@ const StyledTitle = styled(motion.div)`
 
 const FormDiv = styled(motion.div)`
   height: 20vh;
-  width: 5vw;
-  background-color: #58a929;
-  display: flex;
+  width: 36vw;
+
+  display: block;
   flex-direction: column;
+  font-family: "Poppins", sans-serif;
+`;
+
+const NameInput = styled.input`
+  width: 20rem;
+  font-size: 2rem;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 0.2rem 0.2rem;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  margin: 1rem 0.5rem 1rem 0rem;
+`;
+
+const EmailInput = styled.input`
+  width: 20rem;
+  font-size: 2rem;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 0.2rem 0.2rem;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  margin: 1rem 0rem 1rem 0.9rem;
+`;
+
+const TextArea = styled.textarea`
+  width: 100%;
+  font-size: 2rem;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 0.2rem 0.2rem;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  margin: 1rem 0rem;
+`;
+
+const SubmitButton = styled.button`
+  background-color: #4e8183;
+  color: white;
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  width: 20rem;
+  font-size: 2rem;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0rem 0rem;
+  border-radius: 30px;
+  border-color: #4e8183;
+  height: 4rem;
+  @media (max-width: 480px) {
+    font-size: 1.1rem; /* smaller font size */
+    padding: 0.8rem 1.6rem; /* smaller padding */
+    width: 14rem;
+    display: flex;
+    margin: 0 auto;
+    font-family: "Poppins", sans-serif;
+  }
+`;
+
+const NameEmail = styled(motion.div)`
+  display: flex;
 `;
 
 export default ContactSection;
