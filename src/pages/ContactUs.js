@@ -9,7 +9,7 @@ const ContactUs = () => {
   return (
     <div>
       <ContactUsMainDiv>
-        <ContactSection />
+        <ContactSecForm />
       </ContactUsMainDiv>
       {/* <WaveSvg
         viewBox="0 0 1440 363"

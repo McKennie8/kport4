@@ -184,7 +184,7 @@ const ContactSmall = styled.div`
     align-items: center;
     min-height: 10vh;
     overflow: hidden;
-    padding: 8rem 2rem;
+    padding: 2rem 0rem;
     button {
       margin: 2rem 0rem 5rem 0rem;
       border-radius: 30px;
@@ -197,25 +197,44 @@ const ContactSmall = styled.div`
 `;
 
 const ContactP = styled(motion.p)`
-  padding: 1.5rem 0rem;
+  padding: 0.5rem 0rem;
   font-size: 1.8rem;
   @media (max-width: 480px) {
     font-size: 1.3rem;
     text-align: center;
     display: flex;
   }
+  @media (max-width: 480px) {
+    padding: 1rem 0rem 0rem 0rem;
+  }
 `;
 const StyledTitle = styled(motion.div)`
   padding: 0rem 0rem;
+  @media (max-width: 480px) {
+    padding-top: 2rem;
+  }
 `;
 
 const FormDiv = styled(motion.div)`
-  height: 20vh;
+  height: 30vh;
   width: 36vw;
 
-  display: block;
+  display: flex;
+  justify-content: center;
   flex-direction: column;
   font-family: "Poppins", sans-serif;
+  margin: 0;
+
+  @media (max-width: 480px) {
+    margin: 0;
+    padding: 0rem 0rem;
+    align-items: center;
+    width: 80vw;
+    height: 45vh;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr;
+  }
 `;
 
 const NameInput = styled.input`
@@ -227,6 +246,12 @@ const NameInput = styled.input`
   font-family: "Poppins", sans-serif;
   border: none;
   margin: 1rem 0.5rem 1rem 0rem;
+  background-color: #38393a;
+  color: white;
+  @media (max-width: 480px) {
+    margin: 3rem 0rem 0rem 0rem;
+    width: 100%;
+  }
 `;
 
 const EmailInput = styled.input`
@@ -238,6 +263,12 @@ const EmailInput = styled.input`
   font-family: "Poppins", sans-serif;
   border: none;
   margin: 1rem 0rem 1rem 0.9rem;
+  background-color: #38393a;
+  color: white;
+  @media (max-width: 480px) {
+    margin: 1rem 0rem 1rem 0rem;
+    width: 100%;
+  }
 `;
 
 const TextArea = styled.textarea`
@@ -248,14 +279,19 @@ const TextArea = styled.textarea`
   padding: 0.2rem 0.2rem;
   font-family: "Poppins", sans-serif;
   border: none;
-  margin: 1rem 0rem;
+  margin: 0.5rem 0rem;
+  background-color: #38393a;
+  color: white;
+  @media (max-width: 480px) {
+    margin: 0rem 0rem 0rem 0rem;
+  }
 `;
 
 const SubmitButton = styled.button`
   background-color: #4e8183;
   color: white;
-  display: flex;
-
+  display: block;
+  margin: 0 auto;
   flex-direction: column;
   align-items: center;
   width: 20rem;
@@ -269,15 +305,20 @@ const SubmitButton = styled.button`
   @media (max-width: 480px) {
     font-size: 1.1rem; /* smaller font size */
     padding: 0.8rem 1.6rem; /* smaller padding */
-    width: 14rem;
-    display: flex;
+    width: 100%;
+    display: block;
     margin: 0 auto;
     font-family: "Poppins", sans-serif;
+    align-self: center;
   }
 `;
 
 const NameEmail = styled(motion.div)`
   display: flex;
+  @media (max-width: 480px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export default ContactSecForm;
