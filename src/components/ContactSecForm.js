@@ -203,6 +203,7 @@ const ContactP = styled(motion.p)`
     font-size: 1.3rem;
     text-align: center;
     display: flex;
+    width: 80vw;
   }
   @media (max-width: 480px) {
     padding: 1rem 0rem 0rem 0rem;
@@ -230,7 +231,7 @@ const FormDiv = styled(motion.div)`
     padding: 0rem 0rem;
     align-items: center;
     width: 80vw;
-    height: 45vh;
+    height: 58vh;
     display: grid;
     align-items: center;
     grid-template-columns: 1fr;
