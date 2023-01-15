@@ -4,33 +4,44 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import MenuIcon2 from "./MenuIcon2";
 
+import AboutUs from "../pages/AboutUs";
+
 const Nav3 = () => {
   const [hamburgerOpen, setHamburgerOpen] = useState(false);
   console.log("burger toggle");
 
   return (
-    <NavDiv hamburgerOpen={hamburgerOpen}>
-      <MenuDiv>
-        <ul>
-          <li>
-            <a href="/" className="navtabs">
-              About Me
-            </a>
-          </li>
-          <li>
-            <a href="/work" className="navtabs">
-              My Work
-            </a>
-          </li>
-          <li>
-            <a href="/contact" className="navtabs">
-              Contact Me
-            </a>
-          </li>
-        </ul>
-      </MenuDiv>
-      <MenuIcon2 onClick={() => setHamburgerOpen(!hamburgerOpen)} />
-    </NavDiv>
+    <>
+      {!hamburgerOpen ? (
+        <>
+          <AboutUs />
+          <MenuIcon2 onClick={() => setHamburgerOpen(!hamburgerOpen)} />
+        </>
+      ) : (
+        <NavDiv hamburgerOpen={hamburgerOpen}>
+          <MenuDiv>
+            <ul>
+              <li>
+                <a href="/" className="navtabs">
+                  About Me
+                </a>
+              </li>
+              <li>
+                <a href="/work" className="navtabs">
+                  My Work
+                </a>
+              </li>
+              <li>
+                <a href="/contact" className="navtabs">
+                  Contact Me
+                </a>
+              </li>
+            </ul>
+          </MenuDiv>
+          <MenuIcon2 onClick={() => setHamburgerOpen(!hamburgerOpen)} />
+        </NavDiv>
+      )}
+    </>
   );
 };
 
@@ -67,6 +78,9 @@ const NavDiv = styled(motion.div)`
   height: 100%;
   color: white;
   z-index: 10;
+  @media (max-width: 480px) {
+    z-index: 1;
+  }
 
   ul {
     display: ${function ({ hamburgerOpen }) {

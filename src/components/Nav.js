@@ -91,7 +91,7 @@ const StyledNav = styled.nav`
     }
   }
 
-  z-index: 10;
+  z-index: 1;
   #kmwdlogo img {
     height: 10rem;
     padding: 0rem 0rem;
