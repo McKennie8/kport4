@@ -14,7 +14,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import styled from "styled-components";
 import MenuIcon from "./MenuIcon";
 
-const ContactSection = () => {
+const ContactSecForm = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -280,4 +280,4 @@ const NameEmail = styled(motion.div)`
   display: flex;
 `;
 
-export default ContactSection;
+export default ContactSecForm;

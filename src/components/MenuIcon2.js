@@ -14,16 +14,20 @@ const MenuIcon2 = ({ onClick }) => {
 
 const MenuDiv = styled.button`
   min-height: 5vh;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   color: white;
   font-size: 6vh;
   background-color: #4e8183;
   padding: 0.5rem 1rem;
+  z-index: 1000;
 
   &:hover {
     cursor: pointer;
+  }
+  @media (min-width: 601px) {
+    display: none;
   }
 `;
 

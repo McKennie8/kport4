@@ -32,38 +32,67 @@ const ContactSection = () => {
     };
   }, []);
   return (
-    <ContactDiv>
-      <ContactSmall>
-        <StyledTitle>
-          <Hide>
-            <motion.h2 variants={titleAnim}>Let's make something</motion.h2>
-          </Hide>
-          <Hide>
-            <motion.h2 variants={titleAnim}>
-              <span>beautiful</span>
-            </motion.h2>
-          </Hide>
-          <Hide>
-            <motion.h2 variants={titleAnim}>together.</motion.h2>
-          </Hide>
-        </StyledTitle>
-        <ContactP variants={fade}>
-          Contact me for your web development needs
-        </ContactP>
-        <ButtonDecor href="mailto:kirby@kirbymartin.com?subject=Friendly Inquiry&body=Hello Kirby,%0D%0A%0D%0AI am interested in learning more about your services.%0D%0A%0D%0ARegards,%0D%0A[Your Name]">
-          <ContactButton className="contact-button" variants={fade}>
-            Contact Me
-            <StyledEnvelope icon={faEnvelope} />
-          </ContactButton>
-        </ButtonDecor>
-      </ContactSmall>
+    <>
+      {!hamburgerOpen ? (
+        <ContactDiv>
+          <ContactSmall>
+            <StyledTitle>
+              <Hide>
+                <motion.h2 variants={titleAnim}>Let's make something</motion.h2>
+              </Hide>
+              <Hide>
+                <motion.h2 variants={titleAnim}>
+                  <span>beautiful</span>
+                </motion.h2>
+              </Hide>
+              <Hide>
+                <motion.h2 variants={titleAnim}>together.</motion.h2>
+              </Hide>
+            </StyledTitle>
+            <ContactP variants={fade}>
+              Contact me for your web development needs
+            </ContactP>
+            <ButtonDecor href="mailto:kirby@kirbymartin.com?subject=Friendly Inquiry&body=Hello Kirby,%0D%0A%0D%0AI am interested in learning more about your services.%0D%0A%0D%0ARegards,%0D%0A[Your Name]">
+              <ContactButton className="contact-button" variants={fade}>
+                Contact Me
+                <StyledEnvelope icon={faEnvelope} />
+              </ContactButton>
+            </ButtonDecor>
+          </ContactSmall>
 
-      <Image>
-        <motion.img variants={photoAnim} src={Kirby} alt="Kirby" />
-      </Image>
-    </ContactDiv>
+          <Image>
+            <motion.img variants={photoAnim} src={Kirby} alt="Kirby" />
+          </Image>
+        </ContactDiv>
+      ) : (
+        <NavDiv hamburgerOpen={hamburgerOpen}>
+          <MenuDiv>
+            <ul>
+              <li>
+                <a href="/" className="navtabs">
+                  About Me
+                </a>
+              </li>
+              <li>
+                <a href="/work" className="navtabs">
+                  My Work
+                </a>
+              </li>
+              <li>
+                <a href="/contact" className="navtabs">
+                  Contact Me
+                </a>
+              </li>
+            </ul>
+          </MenuDiv>
+          <MenuIcon2 onClick={() => setHamburgerOpen(!hamburgerOpen)} />
+        </NavDiv>
+      )}
+      ;
+    </>
   );
 };
+
 //Styled Components
 const StyledEnvelope = styled(FontAwesomeIcon)`
   color: white;
@@ -175,5 +204,54 @@ const ContactP = styled(motion.p)`
 `;
 const StyledTitle = styled(motion.div)`
   padding: 0rem 0rem;
+`;
+const MenuDiv = styled.div`
+  height: 100%;
+  min-width: 0;
+  overflow-x: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: white;
+  font-size: 6vh;
+  background-color: #4e8183;
+  padding: 5rem 0rem;
+  background-size: cover;
+`;
+
+const NavDiv = styled(motion.div)`
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  color: white;
+  z-index: 99;
+  @media (max-width: 480px) {
+    z-index: 1;
+  }
+
+  ul {
+    display: ${function ({ hamburgerOpen }) {
+      return hamburgerOpen ? "inline" : "none";
+    }};
+    flex-wrap: wrap;
+    float: right;
+    margin: 4rem 0rem;
+    padding: 0rem 0rem;
+    color: white;
+  }
+  ul li {
+    list-style-type: none;
+    padding-right: 2rem;
+    color: white;
+    text-decoration: none;
+    width: 80vh;
+    padding: 2rem 0rem;
+    border-bottom: 1px solid #ccc;
+    width: 100vw;
+    text-align: center;
+  }
+  @media (min-width: 601px) {
+    display: none;
+  }
 `;
 export default ContactSection;

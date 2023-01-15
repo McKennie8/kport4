@@ -4,8 +4,6 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import MenuIcon2 from "./MenuIcon2";
 
-import AboutUs from "../pages/AboutUs";
-
 const Nav3 = () => {
   const [hamburgerOpen, setHamburgerOpen] = useState(false);
   console.log("burger toggle");
@@ -14,7 +12,6 @@ const Nav3 = () => {
     <>
       {!hamburgerOpen ? (
         <>
-          <AboutUs />
           <MenuIcon2 onClick={() => setHamburgerOpen(!hamburgerOpen)} />
         </>
       ) : (
@@ -77,9 +74,9 @@ const NavDiv = styled(motion.div)`
   width: 100%;
   height: 100%;
   color: white;
-  z-index: 10;
+  z-index: 99;
   @media (max-width: 480px) {
-    z-index: 1;
+    z-index: 99;
   }
 
   ul {

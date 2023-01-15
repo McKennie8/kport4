@@ -3,11 +3,15 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import ContactSection from "../components/ContactSection";
 import ContactSecForm from "../components/ContactSecForm";
+import ContactExp from "../components/ContactExp";
 
 const ContactUs = () => {
   return (
     <div>
-      <WaveSvg
+      <ContactUsMainDiv>
+        <ContactSection />
+      </ContactUsMainDiv>
+      {/* <WaveSvg
         viewBox="0 0 1440 363"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -21,8 +25,7 @@ const ContactUs = () => {
           strokeOpacity="0.5"
           strokeWidth="20"
         />
-      </WaveSvg>
-      <ContactSecForm />
+      </WaveSvg> */}
     </div>
   );
 };
@@ -31,6 +34,9 @@ const WaveSvg = styled.svg`
   position: absolute;
   left: 0;
   z-index: 1;
+`;
+const ContactUsMainDiv = styled.div`
+  margin-top: 3rem; /* or any other value that works for you */
 `;
 
 export default ContactUs;
