@@ -89,6 +89,9 @@ const StyledNav = styled.nav`
       text-align: center;
       padding: 1rem 0rem;
     }
+    a:hover {
+      color: white;
+    }
   }
 
   z-index: 1;

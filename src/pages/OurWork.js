@@ -57,7 +57,9 @@ const OurWork = () => {
       </motion.div>
       <Movie>
         <motion.h2 variants={fade}>Customized Shopify Store</motion.h2>
-        <motion.h2 variants={fade}>Password: Summer</motion.h2>
+        <motion.h2 variants={fade}>
+          <span className="password">Password:</span> summer
+        </motion.h2>
         <motion.div variants={lineAnim} className="line"></motion.div>
 
         <Hide>
@@ -122,9 +124,20 @@ const Work = styled(motion.div)`
     padding: 2rem 2rem;
   }
 
+  .password {
+    color: white;
+    transition: color 0.2s ease-in-out;
+  }
+  .password:hover {
+    color: #4e8183;
+  }
   h2 {
     padding: 1rem 5rem;
     color: #4e8183;
+    transition: color 0.2s ease-in-out;
+  }
+  h2:hover {
+    color: #fff; /* Set the color of the h2 element to white upon hover */
   }
   @media (max-width: 480px) {
     min-height: 100vh;
@@ -144,6 +157,13 @@ const Movie = styled(motion.div)`
     height: 0.5rem;
     background: #4e8183;
     margin-bottom: 3rem;
+    transition: color 0.2s ease-in-out;
+    width: 2rem;
+
+    &:hover {
+      background: white;
+      width: 100%;
+    }
   }
   img {
     width: 100%;
@@ -170,28 +190,28 @@ const Hide = styled.div`
   overflow: hidden;
   img.flipflopapp {
     cursor: pointer;
-    opacity: 1;
+    opacity: 0.5;
   }
   img.flipflopapp:hover {
     cursor: pointer;
-    opacity: 0.3;
+    opacity: 1;
   }
   img.muzikplayerapp {
     cursor: pointer;
-    opacity: 1;
+    opacity: 0.5;
   }
   img.muzikplayerapp:hover {
     cursor: pointer;
-    opacity: 0.3;
+    opacity: 1;
   }
 
   img.breeze {
     cursor: pointer;
-    opacity: 1;
+    opacity: 0.5;
   }
   img.breeze:hover {
     cursor: pointer;
-    opacity: 0.3;
+    opacity: 1;
   }
   @media (max-width: 480px) {
     video {
@@ -207,7 +227,7 @@ const Hide = styled.div`
 const Frame1 = styled(motion.div)`
   position: fixed;
   left: 0;
-  top: 10%;
+  top: 0%;
   width: 100%;
   height: 100vh;
   background: #023059;
