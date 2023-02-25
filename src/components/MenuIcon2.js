@@ -23,8 +23,9 @@ const MenuDiv = styled.button`
   padding: 0.5rem 1rem;
   z-index: 1000;
 
-  &:hover {
-    cursor: pointer;
+  &:focus {
+    background-color: #f5f5f5;
+    color: #3c6f71;
   }
   @media (min-width: 601px) {
     display: none;

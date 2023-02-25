@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import flipflopapp from "../img/flipflopapp.png";
+import muzikplayerapp from "../img/muzikplayerapp.png";
+import breezestorefront from "../img/breezestorefront.png";
 
 //Images
 import MenuIcon from "../components/MenuIcon";
@@ -53,15 +56,36 @@ const OurWork = () => {
         <Frame4 variants={slider}></Frame4>
       </motion.div>
       <Movie>
-        <motion.h2 variants={fade}>Searchable Movies App</motion.h2>
+        <motion.h2 variants={fade}>Customized Shopify Store</motion.h2>
+        <motion.h2 variants={fade}>Password: Summer</motion.h2>
         <motion.div variants={lineAnim} className="line"></motion.div>
 
         <Hide>
-          <video
+          <img
+            className="breeze"
+            src={breezestorefront}
             variants={photoAnim}
-            src={MoviesApp}
+            onClick={() =>
+              window.open("https://breeze7-coffee.myshopify.com/", "_blank")
+            }
+            alt="shopify store"
+          />
+        </Hide>
+
+        <motion.h2 variants={fade}>Searchable Movies App</motion.h2>
+        <motion.div variants={lineAnim} className="line"></motion.div>
+        <Hide>
+          <img
+            className="flipflopapp"
+            src={flipflopapp}
+            variants={photoAnim}
+            onClick={() =>
+              window.open(
+                "https://celadon-hummingbird-453f66.netlify.app",
+                "_blank"
+              )
+            }
             alt="movie app"
-            controls
           />
         </Hide>
       </Movie>
@@ -70,11 +94,17 @@ const OurWork = () => {
         <motion.div variants={lineAnim} className="line"></motion.div>
 
         <Hide>
-          <video
+          <img
+            className="muzikplayerapp"
             variants={photoAnim}
-            src={MusicPlayerApp2}
+            onClick={() =>
+              window.open(
+                "https://legendary-twilight-1c2b30.netlify.app",
+                "_blank"
+              )
+            }
+            src={muzikplayerapp}
             alt="music player app"
-            controls
           />
         </Hide>
       </Movie>
@@ -138,6 +168,31 @@ const Movie = styled(motion.div)`
 
 const Hide = styled.div`
   overflow: hidden;
+  img.flipflopapp {
+    cursor: pointer;
+    opacity: 1;
+  }
+  img.flipflopapp:hover {
+    cursor: pointer;
+    opacity: 0.3;
+  }
+  img.muzikplayerapp {
+    cursor: pointer;
+    opacity: 1;
+  }
+  img.muzikplayerapp:hover {
+    cursor: pointer;
+    opacity: 0.3;
+  }
+
+  img.breeze {
+    cursor: pointer;
+    opacity: 1;
+  }
+  img.breeze:hover {
+    cursor: pointer;
+    opacity: 0.3;
+  }
   @media (max-width: 480px) {
     video {
       width: 100%;
