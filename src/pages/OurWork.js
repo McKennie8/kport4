@@ -111,6 +111,26 @@ const OurWork = () => {
         </Hide>
       </Movie>
 
+      <Movie>
+        <motion.h2 variants={fade}>Red Letter Brand Store</motion.h2>
+        <motion.div variants={lineAnim} className="line"></motion.div>
+
+        <Hide>
+          <img
+            className="muzikplayerapp"
+            variants={photoAnim}
+            onClick={() =>
+              window.open(
+                "https://legendary-twilight-1c2b30.netlify.app",
+                "_blank"
+              )
+            }
+            src={muzikplayerapp}
+            alt="music player app"
+          />
+        </Hide>
+      </Movie>
+
       <ScrollTop />
     </Work>
   );
