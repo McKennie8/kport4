@@ -7,7 +7,7 @@ const ScrolledSkills = () => {
   const scrollContainerRef = useRef(null);
   const [scrollPos, setScrollPos] = useState(0);
   const words = [
-    "ReactJS",
+    "ReactJS(test)",
     "ES5/ES6",
     "Liquid",
     "Shopify",
@@ -18,7 +18,7 @@ const ScrolledSkills = () => {
     "REST",
     "npm",
     "JSON",
-    "Git",
+    "Git(test)",
   ];
 
   useEffect(() => {
@@ -37,14 +37,16 @@ const ScrolledSkills = () => {
   return (
     <ScrollContainer ref={scrollContainerRef}>
       {words.map((word, index) => (
-        <div key={index}>{word}</div>
+        <div key={index} style={{ marginBottom: "20px" }}>
+          <div style={{ marginBottom: "20px" }}>{word}</div>
+        </div>
       ))}
     </ScrollContainer>
   );
 };
 
 const ScrollContainer = styled(motion.div)`
-  height: 200px; // Set the height of the container
+  height: 250px; // Set the height of the container
   overflow-y: scroll; // Enable vertical scrolling
 `;
 export default ScrolledSkills;
