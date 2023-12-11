@@ -72,7 +72,7 @@ const Variants = () => (
 const StyledContainer = styled(motion.ul)`
   width: 80vh;
 
-  height: 700px;
+  height: 1000px;
   display: grid;
   overflow: hidden;
   margin: 0;
@@ -118,6 +118,7 @@ const StyledItem = styled(motion.li)`
 const StyledText = styled(motion.div)`
   font-size: 20px;
   color: #ffba66;
+
   @media (max-width: 480px) {
     display: none;
   }
