@@ -3,6 +3,7 @@ import styled from "styled-components";
 import flipflopapp from "../img/flipflopapp.png";
 import muzikplayerapp from "../img/muzikplayerapp.png";
 import breezestorefront from "../img/breezestorefront.png";
+import RedLetterBrand from "../img/RedLetterBrand.png";
 
 //Images
 import MenuIcon from "../components/MenuIcon";
@@ -23,6 +24,7 @@ import MusicPlayerApp2 from "../img/MusicPlayerApp2.mp4";
 
 import ScrollTop from "../components/ScrollTop";
 import { useScroll } from "../components/UseScroll";
+import { Redirect } from "@gatsbyjs/reach-router";
 
 const OurWork = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -55,6 +57,20 @@ const OurWork = () => {
         <Frame3 variants={slider}></Frame3>
         <Frame4 variants={slider}></Frame4>
       </motion.div>
+      <Movie>
+        <motion.h2 variants={fade}>Red Letter Brand Store</motion.h2>
+        <motion.div variants={lineAnim} className="line"></motion.div>
+
+        <Hide>
+          <img
+            className="redletterbrandapp"
+            variants={photoAnim}
+            onClick={() => window.open("https://redletterbrand.co/", "_blank")}
+            src={RedLetterBrand}
+            alt="red letter brand store"
+          />
+        </Hide>
+      </Movie>
       <Movie>
         <motion.h2 variants={fade}>Customized Shopify Store</motion.h2>
         <motion.h2 variants={fade}>
@@ -93,26 +109,6 @@ const OurWork = () => {
       </Movie>
       <Movie>
         <motion.h2 variants={fade}>Music Player App</motion.h2>
-        <motion.div variants={lineAnim} className="line"></motion.div>
-
-        <Hide>
-          <img
-            className="muzikplayerapp"
-            variants={photoAnim}
-            onClick={() =>
-              window.open(
-                "https://legendary-twilight-1c2b30.netlify.app",
-                "_blank"
-              )
-            }
-            src={muzikplayerapp}
-            alt="music player app"
-          />
-        </Hide>
-      </Movie>
-
-      <Movie>
-        <motion.h2 variants={fade}>Red Letter Brand Store</motion.h2>
         <motion.div variants={lineAnim} className="line"></motion.div>
 
         <Hide>
