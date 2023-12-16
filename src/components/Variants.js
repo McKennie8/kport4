@@ -72,7 +72,7 @@ const Variants = () => (
 const StyledContainer = styled(motion.ul)`
   width: 80vh;
 
-  height: 1000px;
+  height: 700px;
   display: grid;
   overflow: hidden;
   margin: 0;
